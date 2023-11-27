@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Criptomoneda Meme</title>
+    <style>
+        /* Root color definitions */
+        :root {
+            --primary-color: #f4e7d2;
+            --secondary-color: #ffbb91;
+            --accent-color: #732700;
+            --text-color: #333;
+            --link-hover-color: #e63946;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 120px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: var(--secondary-color);
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Higher z-index to ensure it's above other elements */
+        }
+
+        /* Navigation styles */
+        /* Navigation styles */
+nav {
+    background-color: var(--primary-color);
+    text-align: center;
+    position: fixed;
+    top: 10px; /* Adjust if you want some space from the top */
+    width: 60%; /* Set to 60% of the viewport width */
+    left: 50%;
+    transform: translateX(-50%); /* Center the nav */
+    z-index: 1000;
+    padding: 20px 0; /* Increased padding for a taller navigation bar */
+    border-radius: 25px 25px 25px 25px; /* Increased border-radius for more rounded corners */
+}
+
+        nav a {
+            text-decoration: none;
+            margin: 0 20px;
+            color: var(--accent-color);
+            font-size: 24px; /* Adjusted font size */
+            padding: 10px 20px;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        nav a:hover {
+            color: var(--link-hover-color);
+        }
+
+        /* Container styles */
+        .container {
+    width: 80%; /* Set to 80% of the viewport width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+        /* Section styles */
+        section {
+            background-color: #ffffff;
+            padding: 40px; /* Increased padding for whitespace */
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+
+        section h2 {
+            color: var(--accent-color);
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+
+        /* Image and flex adjustments */
+        [style*="--flex"]:not(:style*="--flex:none") {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+      /* Footer styles */
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Align children to opposite ends */
+    align-items: center; /* Vertically center align items */
+}
+
+footer .footer-text {
+    color: var(--text-color);
+    margin-right: auto; /* Pushes other items to the right */
+}
+
+footer .social-icons {
+    margin-left: auto; /* Pushes icons to the right */
+    display: flex;
+    align-items: center;
+}
+
+/* Individual icon adjustment (if needed) */
+footer .social-icons a {
+    margin: 0 5px; /* Add spacing between icons */
+}
+
+/* ...rest of your styles... */
+
+        
+        /* About section styles */
+#about {
+    display: flex;
+    align-items: center; /* This will vertically align items in the center */
+    justify-content: space-between; /* This will place the text and image on opposite ends */
+    gap: 20px; /* This adds some space between the text and the image */
+}
+
+#about .text-content {
+    flex-grow: 1; /* Allows text content to fill available space */
+}
+
+#about .image-content {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    max-width: 250px; /* Adjust the max-width as necessary */
+    text-align: right; /* Aligns the image to the right */
+}
+
+/* Ensure images do not stretch and maintain their aspect ratio */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures the image does not have extra space below it */
+}
+
+/* FAQ styles */
+#faq {
+    margin-bottom: 40px;
+}
+
+.faq-item summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    outline: none;
+}
+
+.faq-item summary:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.faq-item p {
+    padding: 10px;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+/* ...rest of your styles... */
+
+/* Estilos globales que ya tienes, no necesitan ser cambiados para esta parte */
+
+/* ... */
+
+/* Estilos de secciones que ya tienes, no necesitan ser cambiados para esta parte */
+
+/* ... */
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 768px) { /* 768px es un punto de ruptura común para tabletas y dispositivos móviles */
+    /* Hace que el menú de navegación ocupe el ancho completo en dispositivos móviles */
+    nav {
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: none; /* Elimina la transformación ya que el ancho es del 100% */
+    }
+
+    /* Hace que los contenedores ocupen el ancho completo en dispositivos móviles */
+    .container {
+        width: 100%; /* Se ajusta al 100% del ancho de la pantalla */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Cambia la disposición de la sección #about para apilar la imagen debajo del texto */
+    #about {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Alinea los elementos al centro */
+    }
+
+    #about .text-content,
+    #about .image-content {
+        width: 100%; /* Hace que el texto y la imagen ocupen el ancho completo */
+        max-width: none; /* Elimina cualquier max-width que se haya aplicado */
+    }
+
+    /* Si has utilizado .faq-item en tu CSS para la sección de preguntas frecuentes, asegúrate de que también se ajuste correctamente */
+    .faq-item summary,
+    .faq-item p {
+        width: 100%; /* Hace que los detalles de FAQ ocupen el ancho completo */
+    }
+
+    /* Ajustes adicionales para otros elementos que puedas tener en tu sitio */
+}
+
+/* ...resto de tus estilos... */
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Banner image goes here -->
+    </header>
+    
+    <nav>
+        <a href="#about">Cavy</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+         <div class="text-content">
+            <h2>Cavy</h2>
+            <p style="flex: 2;">
+                <b>Cavy is the first Guinea Pig Meme Coin</b>
+                <br>Cavy is a meme cryptocurrency created for the DeBank community.
+                <br>Everyone loves guinea pigs, and it was essential for them to have their own meme currency. 
+                <br>Nobody understood how we could have gotten this far without a guinea pig meme coin. 
+                <br>Here you will find the most adorable guinea pigs and guinea pig memes. Nothing more.
+            </p>
+            </div>
+             <div class="image-content">
+        <img src="logo1.png" alt="Logo de Cavy">
+    </div>
+          <!--  <img src="logo1.png" alt="Logo de Cavy" style="flex: 1; padding-left: 20px; max-width: 200px; height: auto;"> -->
+        </section>
+
+        <section id="tokenomics">
+            <h2>Tokenomics</h2>
+            <ul>
+                <li>1,000,000,000 tokens</li>
+                <li>50% airdropped to 100 DeBank users at launch (lucky draw winners)</li>
+                <li>50% for liquidity provision</li>
+                <li>No taxes on buying or selling</li>
+            </ul>
+        </section>
+
+        <section id="roadmap">
+            <h2>Roadmap</h2>
+            <p>There is no roadmap. There will be no web3 video games, no AI applications, or absolutely any utility. 
+            <br>Only cute, fluffy guinea pigs.
+            </p>
+        </section>
+        
+        <section id="faq" class="scroll-target">
+    <h2>FAQ</h2>
+    <details class="faq-item">
+        <summary>What is Cavy?</summary>
+        <p>Cavy is a meme coin about guinea pigs. Just that. Memes. Guinea pigs. That's it.</p>
+    </details>
+    <details class="faq-item">
+        <summary>What network is Cavy on?</summary>
+        <p>Cavy is on the Base network, an Ethereum L2 with very low fees.</p>
+    </details>
+    <details class="faq-item">
+        <summary>Is it true that there is no roadmap?</summary>
+        <p>Yes. There is no roadmap.</p>
+    </details>
+</section>
+
+
+
+    </div>
+
+   <footer>
+    <div class="footer-text">
+        <p>© 2023 Cavy Coin. All rights reserved.</p>
+    </div>
+    <div class="social-icons">
+        <!-- Your icons go here -->
+        <a href="https://x.com/CavyCoin" target="_blank"><img src="logo-black.png" alt="Twitter" style="height: 35px"></a>
+        <a href="https://comprar-tu-criptomoneda.com" target="_blank"><img src="uniswap.png" alt="Comprar" style="height: 45px"></a>
+    </div>
+</footer>
+
+     <script>
+         document.addEventListener("DOMContentLoaded", function () {
+             // Obtener todos los enlaces del menú
+             const menuLinks = document.querySelectorAll('nav a');
+
+             // Agregar evento de clic a cada enlace del menú
+             menuLinks.forEach(function (link) {
+                 link.addEventListener('click', function (e) {
+                     e.preventDefault();
+
+                     // Obtener el valor del atributo href del enlace
+                     const targetId = this.getAttribute('href').substring(1); // Eliminar el signo '#' del inicio
+
+                     // Obtener el elemento de destino utilizando su ID
+                     const targetElement = document.getElementById(targetId);
+
+                     // Calcular la altura del menú fijo
+                     const menuHeight = document.querySelector('nav').offsetHeight;
+
+                     // Obtener la posición vertical del elemento de destino
+                     const targetPosition = targetElement.offsetTop - menuHeight;
+
+                     // Hacer scroll suavemente al elemento de destino
+                     window.scrollTo({
+                         top: targetPosition - 180, // Ajustar según el diseño
+                         behavior: 'smooth'
+                     });
+                 });
+             });
+         });
+     </script>
+</body>
+</html>
