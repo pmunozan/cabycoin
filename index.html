@@ -89,25 +89,17 @@ nav {
             justify-content: space-between;
         }
 
-      /* Footer styles */
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-align: center;
     padding: 20px;
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Align children to opposite ends */
-    align-items: center; /* Vertically center align items */
+    display: flex; /* Seguimos usando flexbox */
+    justify-content: center; /* Centramos el contenido */
+    align-items: center; /* Alineación vertical al centro */
 }
 
 footer .footer-text {
     color: var(--text-color);
-    margin-right: auto; /* Pushes other items to the right */
-}
-
-footer .social-icons {
-    margin-left: auto; /* Pushes icons to the right */
-    display: flex;
-    align-items: center;
 }
 
 /* Individual icon adjustment (if needed) */
@@ -154,7 +146,7 @@ img {
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--accent-color);
     outline: none;
 }
@@ -170,7 +162,21 @@ img {
     background-color: #fff;
     border-radius: 0 0 5px 5px;
 }
+.social-links {
+    display: flex; /* Utilizamos flexbox para alinear los elementos */
+    justify-content: center; /* Centramos los elementos horizontalmente */
+    align-items: center; /* Alineación vertical al centro */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño del contenedor */
+    margin: 20px 0; /* Espaciado vertical para la sección */
+}
 
+.social-links a img {
+    width: 50px; /* O el tamaño que prefieras */
+    height: 50px; /* Asegurarse que el alto y el ancho sean iguales para mantener la forma circular */
+    border-radius: 50%; /* Esto hace que las imágenes sean circulares */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin perder su proporción */
+    margin-left: 50px; /* Espaciado entre las imágenes */
+}
 /* ...rest of your styles... */
 
 /* Estilos globales que ya tienes, no necesitan ser cambiados para esta parte */
@@ -235,7 +241,7 @@ img {
         <a href="#tokenomics">Tokenomics</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#faq">FAQ</a>
-         <a href="https://x.com/CavyCoin" target="_blank">Twitter</a>
+         <a href="#contact">Contact</a> 
         
     </nav>
 
@@ -245,7 +251,7 @@ img {
             <h2>Cavy</h2>
             <p style="flex: 2;">
                 <b>Cavy is the first Guinea Pig Meme Coin</b>
-                <br>Cavy is a meme cryptocurrency created for the DeBank community.
+                <br>Cavy is a meme coin created for the DeBank community.
                 <br>Everyone loves guinea pigs, and it was essential for them to have their own meme currency. 
                 <br>Nobody understood how we could have gotten this far without a guinea pig meme coin. 
                 <br>Here you will find the most adorable guinea pigs and guinea pig memes. Nothing more.
@@ -282,16 +288,34 @@ img {
     </details>
     <details class="faq-item">
         <summary>What network is Cavy on?</summary>
-        <p>To be defined</p>
+        <p>Cavy is going to launch on Base, an Ethereum Layer 2 (L2) with very low fees.</p>
     </details>
      <details class="faq-item">
-        <summary>How can I buy Caby</summary>
-        <p>To be defined</p>
+        <summary>How can I buy Cavy</summary>
+        <p>After launch, LP will be added to BaseSwap and you can buy Cavy there</p>
     </details>
     <details class="faq-item">
-        <summary>Is it true that there is no roadmap?</summary>
-        <p>Yes. There is no roadmap. Just Cabys</p>
+        <summary>Wen launch?</summary>
+        <p>Soon</p>
     </details>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="social-links">
+        <!-- Twitter -->
+        <a href="https://twitter.com/CavyCoin" target="_blank">
+            <img src="twitterlogo.png" alt="Twitter">
+        </a>
+        <!-- Telegram -->
+        <a href="https://t.me/CavyCoin" target="_blank">
+            <img src="telegramlogo.png" alt="Telegram">
+        </a>
+        <!-- Exchange 
+        <a href="https://exchange.com/CavyCoin" target="_blank">
+            <img src="baselogo.png" alt="Buy"> -->
+        </a>
+    </div>
 </section>
 
 
@@ -300,14 +324,10 @@ img {
 
    <footer>
     <div class="footer-text">
-        <p>© 2023 Cavy Coin. No cabys were harmed in the making of this coin. All rights reserved.</p>
-    </div>
-    <div class="social-icons">
-        <!-- Your icons go here -->
-        <a href="https://x.com/CavyCoin" target="_blank"><img src="logo-black.png" alt="Twitter" style="height: 35px"></a>
-       <!-- <a href="https://comprar-tu-criptomoneda.com" target="_blank"><img src="uniswap.png" alt="Comprar" style="height: 45px"></a>-->
+        <p>© 2023 Cavy Coin. All rights reserved. No cavys were harmed in the making of this coin.</p>
     </div>
 </footer>
+
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
