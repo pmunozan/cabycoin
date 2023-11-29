@@ -171,12 +171,23 @@ img {
 }
 
 .social-links a img {
-    width: 50px; /* O el tamaño que prefieras */
-    height: 50px; /* Asegurarse que el alto y el ancho sean iguales para mantener la forma circular */
+    width: 80px; /* O el tamaño que prefieras */
+    height: 80px; /* Asegurarse que el alto y el ancho sean iguales para mantener la forma circular */
     border-radius: 50%; /* Esto hace que las imágenes sean circulares */
     object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin perder su proporción */
     margin-left: 50px; /* Espaciado entre las imágenes */
 }
+
+/* Opcional: agranda los íconos al pasar el mouse */
+.social-links a:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+        #contact {
+    padding: 20px 0; /* Reduce el padding superior e inferior */
+    /* Si tienes una altura fija, puedes ajustarla o eliminar la propiedad para permitir que el contenido defina la altura */
+}
+
 /* ...rest of your styles... */
 
 /* Estilos globales que ya tienes, no necesitan ser cambiados para esta parte */
